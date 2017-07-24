@@ -14,13 +14,10 @@ public class CSVReader
 
 		try (BufferedReader br = new BufferedReader(new FileReader(csvFile)))
 		{
-
 			while ((line = br.readLine()) != null)
 			{
 				String[] str = line.split(cvsSplitBy);
-
 				System.out.println("<file>${project.build.outputDirectory}/../ds-casebuilder-web/WEB-INF/lib/"+str[0]+"</file>");
-
 			}
 
 		}
